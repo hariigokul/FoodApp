@@ -15,6 +15,7 @@ const formatTitle = (title) => {
 }
 
 const getCouponCode = (desc) => {
+  //Extract Coupon Code from Description
   let coupon = desc && desc.split("|")[1] && desc.split("|")[1].split(" ");
   return coupon[coupon.length - 1].toUpperCase();
 };

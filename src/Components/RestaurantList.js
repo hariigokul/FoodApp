@@ -28,7 +28,6 @@ export default class RestaurantList extends React.Component {
 
   generateRestaurantLists = () => {
     let list = [];
-    console.log(this.state.restaurantList.length);
     this.state.restaurantList.map((restaurant, index) =>
       list.push(
         restaurant.outlet.length > 1 ?
@@ -60,31 +59,7 @@ export default class RestaurantList extends React.Component {
   };
 
   render() {
-    console.log(this.state.restaurantList)
     let restaurants = this.state.restaurantList.length > 0 && this.generateRestaurantLists();
     return <>{restaurants}</>;
   }
 }
-
-// const RestaurantList = () => {
-//   const [restaurantList, setRestaurantList] = useState([]);
-//   useEffect(() => {
-//     console.log("Axios");
-//     let restaurants = [];
-//   });
-
-//   return restaurantList;
-// };
-
-// export default RestaurantList;
-
-// /**
-//  <Restaurant
-//               key={index}
-//               title={restaurant.restaurantName}
-//               displayCostForTwo={restaurant.displayCostForTwo}
-//               longDesc={restaurant.longDescription}
-//               averageReview={restaurant.averageReview}
-//               displayTime={restaurant.displayTime}
-//             />
-//  */

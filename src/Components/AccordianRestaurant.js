@@ -28,6 +28,7 @@ const AccordianRestaurant = ({
       outlets.map((outlet, index) =>
         outletList.push(
           <Restaurant
+          key={index}
             title={outlet.outletName}
             displayCostForTwo={outlet.displayCostForTwo}
             costForTwo={outlet.costForTwo}
@@ -40,7 +41,6 @@ const AccordianRestaurant = ({
         )
       );
     }
-    console.log(outletList)
     return outletList.slice(1);
   };
 
